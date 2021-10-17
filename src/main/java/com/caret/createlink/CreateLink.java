@@ -1,5 +1,7 @@
 package com.caret.createlink;
 
+import com.caret.createlink.block.ModBlocks;
+import com.caret.createlink.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,6 +34,8 @@ public class CreateLink
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
