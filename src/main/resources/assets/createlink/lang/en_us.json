@@ -1,6 +1,6 @@
 {
   "item.createlink.amethyst": "Amethyst",
   "block.createlink.amethyst_ore": "Amethyst Ore",
-  "item.createlink.firestone": "Firestone",
+  "block.createlink.amethyst_button": "Amethyst Button",
   "itemGroup.createLinkTab": "Create Link"
 }

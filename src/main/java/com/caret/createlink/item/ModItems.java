@@ -1,6 +1,8 @@
 package com.caret.createlink.item;
 
 import com.caret.createlink.CreateLink;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.StoneButtonBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,9 +15,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst",
             () -> new Item(new Item.Properties().group(ModItemGroup.CREATELINK_GROUP)));
-
-    public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
-            () -> new Firestone(new Item.Properties().group(ModItemGroup.CREATELINK_GROUP).maxDamage(8)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

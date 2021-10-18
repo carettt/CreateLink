@@ -5,6 +5,7 @@ import com.caret.createlink.item.ModItemGroup;
 import com.caret.createlink.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.StoneButtonBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -22,6 +23,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMETHYST_ORE = registerBlock("amethyst_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> AMETHYST_BUTTON = registerBlock("amethyst_button",
+            () -> new AmethystButtonBlock(AbstractBlock.Properties.create(Material.IRON).
+                    harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f).doesNotBlockMovement()));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
